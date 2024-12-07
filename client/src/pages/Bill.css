@@ -1,0 +1,64 @@
+/* Styling for the bill toggle */
+.bill-toggle {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    /* background-color: red; */
+}
+
+.bill-toggle h2 {
+    width: 50%;
+    text-align: center;
+    padding-bottom: 10px;
+    /* margin-right: 20px; */
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s ease;
+    /* background-color: ; */
+}
+
+.bill-toggle h2:hover {
+    color: #333;
+}
+
+.bill-toggle h2.active {
+    color: #000;
+    border-bottom: 5px solid var(--myprimary-color);
+    border-radius: 10px;
+    /* Color for active tab */
+}
+
+/* Styling for bill content */
+.bill-content {
+    /* margin-top: 20px; */
+    /* Add additional styling as needed for the bill content */
+}
+
+
+.bill-content .table-container {
+    margin-top: 10px;
+}
+
+
+/* creating bill modal */
+.form-container.bill {
+    /* background-color: red; */
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calculate {
+    padding: 5px 10px;
+    width: 70%;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}

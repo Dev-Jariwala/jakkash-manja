@@ -1,0 +1,151 @@
+.statcards-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: ; Adjust as needed */
+  gap: 20px;
+  /* Adjust spacing between cards */
+  margin: auto;
+  width: 95%;
+}
+
+.statcards-container > div {
+  flex: 1 1 calc(33.33% - 20px);
+  /* Distributes remaining space evenly among cards and limits card width */
+  max-width: calc(33.33% - 20px);
+  /* Adjust the max-width of each card */
+}
+
+/* Add a media query for smaller screens */
+@media (max-width: 1050px) {
+  .statcards-container > div {
+    flex-basis: calc(50% - 20px);
+    /* Make cards 50% wide on smaller screens */
+    max-width: calc(50% - 20px);
+    /* Adjust the max-width of each card */
+  }
+  .statcards-container {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Add a media query for smaller screens */
+@media (max-width: 692px) {
+  .statcards-container > div {
+    flex-basis: calc(100% - 20px);
+    /* Make cards 50% wide on smaller screens */
+    max-width: calc(100% - 20px);
+    /* Adjust the max-width of each card */
+  }
+}
+
+.statcard {
+  min-width: 320px;
+  border-radius: 5px;
+  min-height: 120px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 0 20px; */
+}
+
+.statcard.green {
+  background: linear-gradient(45deg, #2ed8b6, #59e0c5);
+}
+
+.statcard.yellow {
+  background: linear-gradient(45deg, #ffb64d, #ffcb80);
+}
+
+.statcard.blue {
+  background: linear-gradient(45deg, #4099ff, #73b4ff);
+}
+
+.statcard.red {
+  background: linear-gradient(45deg, #ff5370, #ff869a);
+}
+
+.statcard.purple {
+  background: linear-gradient(45deg, #a566ff, #c39cff);
+}
+
+.statcard.orange {
+  background: linear-gradient(45deg, #ff9a55, #ffbf87);
+}
+
+.statcard.pink {
+  background: linear-gradient(45deg, #ff66a2, #ff89b5);
+}
+
+.statcard.teal {
+  background: linear-gradient(45deg, #00bcd4, #4dd0e1);
+}
+
+.statcard.deep-blue {
+  background: linear-gradient(45deg, #001f3f, #003366);
+}
+
+.statcard.gold {
+  background: linear-gradient(45deg, #ffd700, #ffec8b);
+}
+
+.statcard.green-yellow {
+  background: linear-gradient(45deg, #adff2f, #d2ff8b);
+}
+
+.statcard.slate {
+  background: linear-gradient(45deg, #6a5acd, #836fff);
+}
+
+.statcard .d-group {
+  width: 85%;
+  display: flex;
+  align-items: center;
+}
+
+.statcard .icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.statcard .content {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.statcard .content .ct {
+  margin: 3px 0;
+}
+
+.statcard .progress {
+  background: rgba(0, 0, 0, 0.2);
+  margin: 5px -10px 5px 0;
+  height: 4px;
+  display: flex;
+  overflow: hidden;
+  font-size: 0.75rem;
+  position: relative;
+  /* Add this line */
+}
+
+.statcard .white-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #fff;
+  width: 0;
+  /* Will be dynamically set in React component */
+  transition: width 0.6s ease;
+}

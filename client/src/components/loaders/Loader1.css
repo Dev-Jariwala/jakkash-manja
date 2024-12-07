@@ -1,0 +1,30 @@
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    overflow-y: scroll;
+}
+
+.donut {
+    width: 3rem;
+    height: 3rem;
+    margin: 2rem;
+    border-radius: 50%;
+    border: 0.45rem solid rgba(151, 159, 208, 0.3);
+    border-top-color: #979fd0;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
