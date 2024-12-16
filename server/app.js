@@ -10,6 +10,7 @@ const clientRoutes = require("./routes/client");
 const purchaseRoutes = require("./routes/purchase");
 const adminRoutes = require("./routes/admin");
 const cors = require("cors");
+const Admin = require("./models/adminSchema");
 const app = express();
 
 app.use(
@@ -35,6 +36,17 @@ app.use("/api/admin", adminRoutes);
 app.get("/", (req, res) => {
   res.send("listining from other side");
 });
+// Periodic Task
+async function periodicTask() {
+  console.log("Periodic task executed at:", new Date().toISOString());
+  const admin = await Admin.findById("65bd3f52eb0cafe4170de54c");
+  console.log("Active collection:", admin);
+  // Add your task logic here
+  // For example, clean up expired sessions, update database stats, etc.
+}
+
+// Run the periodicTask function every 60 seconds
+setInterval(periodicTask, 60 * 1000);
 
 const PORT = process.env.PORT || 80;
 app.listen(PORT, () => {
